@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'kabondregular';
+    src: url('assets/fonts/kabond/kabond-webfont.woff2') format('woff2'),
+         url('assets/fonts/kabond/kabond-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+#bg {
+    height:100%;
+    position: absolute;
+    transition: 1s;
+    width:100%;
+    object-fit: cover;
+    filter: blur(1px);
+    z-index: 0;
+}
+
+.icons {
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+h2 {
+    font-family: 'kabondregular';
+    letter-spacing: 4px;
+    z-index: 2;
+}
+
+.obj > a {
+    z-index: 2;
+}
+
+.obj > a > img {
+    z-index: 2;
+}
+
+.obj > .obj-bg {
+    
+    z-index: 1;
+}
+
+#sunlit > h2 {
+    background-color:rgba(62,29,46,0.9);
+}
+#sunlit > .obj-bg {
+    background-color: rgba(189, 86, 139, 0.7);
+}
+#frozen > h2 {
+    background-color:rgba(12,26,67,0.9);
+}
+#frozen > .obj-bg {
+    background-color: rgba(61, 110, 255, 0.7);
+}
+#crag > h2 {
+    background-color:rgba(49,87,10,0.9);
+}
+#crag > .obj-bg {
+    background-color: rgba(143, 255, 30, 0.7);
+}
+#scorched > h2 {
+    background-color:rgba(76,66,59,0.9);
+}
+#scorched > .obj-bg {
+    background-color: rgba(255, 220, 196, 0.7);
+}
+#tumble > h2 {
+    background-color:rgba(0,53,49,0.9);
+}
+#tumble > .obj-bg {
+    background-color: rgba(0, 255, 234, 0.7);
+}
+#fragile > h2 {
+    background-color:rgba(15,82,81,0.9);
+}
+#fragile > .obj-bg {
+    background-color: rgba(43, 182, 179, 0.7);
+}
+#pipe > h2 {
+    background-color:rgba(21,56,86,0.9);
+}
+#pipe > .obj-bg {
+    background-color: rgba(60, 164, 255, 0.7);
+}
+#outgrate > h2 {
+    background-color:rgba(16,35,43,0.9);
+}
+#outgrate > .obj-bg {
+    background-color: rgba(93, 206, 255, 0.7);
+}
+
+#title {
+    background-color: rgba(150, 226, 214, 0.6);
+    position: absolute;
+    z-index: 5;
+    transition: 1s background-color;
+}
+#title > img {
+    height: 64px;
+    padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+    h2 {
+        color: rgba(245,245,245,0.8);
+        font-size: 3rem;
+        height: fit-content;
+        padding: 1rem 25%;
+        margin-top: 0;
+        opacity: 1;
+
+        text-align: center;
+    }
+    body {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .container {
+        height: 100vh;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
+    .obj {
+        display: grid;
+        scroll-snap-align: start;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+    .obj > .obj-bg {
+        display: block;
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
+    }
+    
+    .obj > a {
+        position: absolute;
+        align-self: center;
+        justify-self: center;
+        max-width: 60%;
+        max-height: 70%;
+        z-index: 2;
+    }
+
+    .obj > a > img {
+        justify-self: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #title {
+        width: 200px;
+        bottom: 0;
+        left: 0;
+        padding: 1rem 2rem;
+    }
+    #title > img {
+        color: rgba(245,245,245,0.8);
+    }
+    #sunlit > .obj-bg {
+        background-color: rgba(62,29,46,0.7);
+    }
+    #frozen > .obj-bg {
+        background-color: rgba(12,26,67,0.7);
+    }
+    #crag > .obj-bg {
+        background-color: rgba(49,87,10,0.7);
+    }
+    #scorched > .obj-bg {
+        background-color: rgba(76,66,59,0.7);
+    }
+    #tumble > .obj-bg {
+        background-color: rgba(0,53,49,0.7);
+    }
+    #fragile > .obj-bg {
+        background-color: rgba(15,82,81,0.7);
+    }
+    #pipe > .obj-bg {
+        background-color: rgba(21,56,86,0.7);
+    }
+    #outgrate > .obj-bg {
+        background-color: rgba(16,35,43,0.7);
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    h2 {
+        color: white;
+        display: none;
+        font-size: 2.5rem;
+        left: 0;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        position: fixed;
+        top: 0;
+    }
+    h2.hover {
+        display: block;
+    }
+    .obj {
+        position: absolute;
+    }
+    .obj > a {
+        position: fixed;
+    }
+    .obj > .obj-bg {
+        display: none;
+        height: 100vh;
+        left: 0;
+        opacity: 0.4;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+    }
+
+    #sunlit {
+        top: 0; 
+        left: 35%;
+    }
+    #sunlit > a > img {
+        width: 256px;
+    }
+
+    #frozen {
+        top: 20%; 
+        left: 60%;
+    }
+    #frozen > a > img {
+        width: 128px;
+    }
+
+    #crag {
+        top: 30%; 
+        left: 80%;
+    }
+    #crag > a > img {
+        width: 200px;
+    }
+
+    #scorched {
+        top: 55%; 
+        left: 65%;
+    }
+    #scorched > a > img {
+        width: 96px;
+    }
+
+    #tumble {
+        bottom: 317px;
+        left: 45%;
+    }
+    #tumble > a > img {
+        width: 256px;
+    }
+
+    #fragile {
+        top: 70%; 
+        left: 20%;
+    }
+    #fragile > a > img {
+        width: 256px;
+    }
+
+    #pipe {
+        top: 40%; 
+        left: 2%;
+    }
+    #pipe > a > img {
+        width: 256px;
+    }
+
+    #outgrate {
+        top: 20%; 
+        left: 15%;
+    }
+    #outgrate > a > img {
+        width: 128px;
+    }
+
+    .hover {
+        filter: brightness(2);
+        transition: 1s all;
+    }
+
+    #title {
+        bottom: 0;
+        right: 0;
+        padding: 1rem 2rem;
+    }
+}
