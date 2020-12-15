@@ -5,6 +5,17 @@
     <script src="https://kit.fontawesome.com/bd388cb508.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        let observer = new IntersectionObserver(callback, options);
+
+        let target = document.querySelector('#frozen');
+        observer.observe(target);
+
         $(document).ready(function(){
 
             $(".obj > a").hover(function(){
