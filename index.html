@@ -7,52 +7,6 @@
     <script>
         $(document).ready(function(){
 
-            $('#content').scroll(function() {
-                var s = $('#sunlit').offset().top,
-                    sH = $('#sunlit').outerHeight(),
-                    f = $('#frozen').offset().top,
-                    fH = $('#frozen').outerHeight(),
-                    c = $('#crag').offset().top,
-                    cH = $('#crag').outerHeight(),
-                    s = $('#scorched').offset().top,
-                    sH = $('#scorched').outerHeight(),
-                    t = $('#tumble').offset().top,
-                    tH = $('#tumble').outerHeight(),
-                    g = $('#fragile').offset().top,
-                    gH = $('#fragile').outerHeight(),
-                    p = $('#pipe').offset().top,
-                    pH = $('#pipe').outerHeight(),
-                    o = $('#outgrate').offset().top,
-                    oH = $('#outgrate').outerHeight(),
-
-                    wH = $(window).height(),
-                    wS = $(this).scrollTop();
-                    console.log(f);
-                    console.log(fH);
-                    console.log(wS);
-                if (wS > (s+sH-wH)){
-                    console.log('Sunlit on the view!');
-                }
-                if (wS > (f+fH-wH)){
-                    console.log('Frozen on the view!');
-                }
-                if (wS > (c+cH-wH)){
-                    console.log('Crag on the view!');
-                }
-                if (wS > (t+tH-wH)){
-                    console.log('Scorched on the view!');
-                }
-                if (wS > (g+gH-wH)){
-                    console.log('H1 on the view!');
-                }
-                if (wS > (p+pH-wH)){
-                    console.log('H1 on the view!');
-                }
-                if (wS > (o+oH-wH)){
-                    console.log('H1 on the view!');
-                }
-            });
-
             $(".obj > a").hover(function(){
                 if (window.matchMedia("(min-width: 800px)").matches && $(this).queue('fx')) {
                     $('#title').css("background-color", $(this).siblings('.obj-bg').css("background-color"),"filter","brightness(150)");

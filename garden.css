@@ -98,6 +98,8 @@ h2 {
 #logo {
     color: rgba(156, 144, 193, 0.8);
     display: grid;
+    font-size: 11px;
+    grid-row-gap: 0.25rem;
     position: absolute;
     z-index: 4;
 }
