@@ -247,7 +247,7 @@ h2 {
     }
     .obj > .obj-bg {
         display: none;
-        height: 100vh;
+        height: calc(100vh+64px);
         left: 0;
         opacity: 0.4;
         position: fixed;
