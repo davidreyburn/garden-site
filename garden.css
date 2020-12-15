@@ -156,7 +156,7 @@ h2 {
     }
     .obj > .obj-bg {
         display: block;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         width: 100vw;
     }
@@ -247,7 +247,7 @@ h2 {
     }
     .obj > .obj-bg {
         display: none;
-        height: calc(100vh+64px);
+        height: 100vh;
         left: 0;
         opacity: 0.4;
         position: fixed;
