@@ -6,6 +6,10 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
 
+        const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+        window.addEventListener('resize', appHeight)
+        appHeight()
+
         $(document).ready(function(){
 
             $(".obj > a").hover(function(){
