@@ -111,6 +111,7 @@ h2 {
 
 #title {
     background-color: rgba(150, 226, 214, 0.6);
+    color: black;
     position: absolute;
     z-index: 4;
     transition: 1s background-color;
@@ -118,6 +119,18 @@ h2 {
 #title > img {
     height: 64px;
     padding-bottom: 0.5rem;
+}
+#title > div > a:link {
+    color: black;
+}
+#title > div > a:visited {
+    color: black;
+}
+#title > div > a:active {
+    color: black;
+}
+#title > a:hover {
+    color: black;
 }
 
 @media only screen and (max-width: 400px) {
@@ -139,11 +152,11 @@ h2 {
     }
     body {
         display: flex;
-        height: 100%;
+        height: var(--app-height);
         overflow: hidden;
     }
     .container {
-        height: 100%;
+        height: var(--app-height);
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
     }

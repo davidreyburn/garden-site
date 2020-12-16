@@ -13,7 +13,7 @@
         $(document).ready(function(){
 
             $(".obj > a").hover(function(){
-                if (window.matchMedia("(min-width: 800px)").matches && $(this).queue('fx')) {
+                if (window.matchMedia("(min-width: 800px)").matches) {
                     $('#title').css("background-color", $(this).siblings('.obj-bg').css("background-color"),"filter","brightness(150)");
                     $('#bg').css("transform", 'scale(1.05)');
                     $(".bg").addClass("hover");
@@ -45,15 +45,25 @@
         <div id="title">
             <img src="img/goab-logo.svg">
             <div class="icons">
-                <i class="fab fa-bandcamp"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-vimeo"></i>
+                <a>
+                    <i class="fab fa-bandcamp" href=""></i>  
+                </a>
+                <a href="https://wwww.instagram.com/nebulaflower/">
+                    <i class="fab fa-instagram"></i> 
+                </a>
+                <a href="https://www.youtube.com/channel/UCDwxF2F4kFjGwiTTrF6Rwdw">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.vimeo.com/rewmedia">
+                    <i class="fab fa-vimeo"></i>
+                </a>
             </div>
         </div>
 
         <div id="logo">
-            <img src="assets/rew-64.png">
+            <a href="https://rew.media">
+                <img src="assets/rew-64.png">
+            </a>
             <small>Copyright © 2020 Rachel Wagner <br> All Rigths Reserved</small>
         </div>
 
