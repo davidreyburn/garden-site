@@ -147,12 +147,11 @@ h2 {
         padding: 1rem 2rem;
         margin-top: 0;
         opacity: 1;
-
         text-align: center;
     }
     body {
         display: flex;
-        height: var(--app-height);
+        height: 100%;
         overflow: hidden;
     }
     .container {
