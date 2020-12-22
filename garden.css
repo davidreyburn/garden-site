@@ -100,7 +100,7 @@ h2 {
     display: grid;
     font-size: 11px;
     grid-row-gap: 0.25rem;
-    position: absolute;
+    position: fixed;
     z-index: 4;
 }
 
