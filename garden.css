@@ -330,6 +330,7 @@ h2 {
     }
     #intro-card > div > img {
         max-height: 124px;
+        align-self: flex-end;
     }
     #intro-card > div {
         display: grid;
