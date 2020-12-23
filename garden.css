@@ -13,7 +13,7 @@ body {
 #bg {
     height:100vh;
     position: fixed;
-    transition: 1s;
+    transition: filter 1s, transform 1s;
     width:100vw;
     object-fit: cover;
     filter: blur(1px);
@@ -25,6 +25,23 @@ body {
     font-size: 2rem;
     justify-content: space-between; 
     width: 100%;
+}
+.icons > a:link {
+    color: black;
+}
+.icons > a:visited {
+    color: black;
+}
+.icons > a:active {
+    color: black;
+}
+
+#intro-card {
+    z-index: 6;
+}
+#intro-card > div > .icons {
+    max-width: 375px;
+    justify-self: center;
 }
 
 h2 {
@@ -120,15 +137,7 @@ h2 {
     height: 64px;
     padding-bottom: 0.5rem;
 }
-#title > div > a:link {
-    color: black;
-}
-#title > div > a:visited {
-    color: black;
-}
-#title > div > a:active {
-    color: black;
-}
+
 #title > a:hover {
     color: black;
 }
@@ -148,6 +157,9 @@ h2 {
         margin-top: 0;
         opacity: 1;
         text-align: center;
+    }
+    h2 > span {
+        letter-spacing: -14px;
     }
     body {
         display: flex;
@@ -180,6 +192,7 @@ h2 {
         max-width: 60%;
         max-height: 70%;
         z-index: 2;
+        filter: drop-shadow(0px 0px 6px black);
     }
 
     .obj > a > img {
@@ -188,8 +201,48 @@ h2 {
         max-height: 100%;
     }
 
+    #intro-card {
+        display: grid;
+        font-family: monospace;
+        font-size: 1.3rem;
+        height: 96%;
+        padding: 1rem;
+        position: relative;
+        scroll-snap-align: start;
+        text-align: center;
+    }
+    #intro-card > div > #intro-close {
+        display: none;
+    }
+    #intro-card > div > img {
+        max-height: 124px;
+    }
+    #intro-card > div {
+        display: grid;
+        grid-template-rows: 24% 7% 15% auto 1.5rem 2.8rem 4rem;
+        background-color: rgba(150, 226, 214, 0.7);
+        padding: 2rem;
+    }
+    #intro-card > div > p {
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+        max-width: 350px;
+    }
+
+    #intro-card > div > .rew-logo {
+        justify-self: center;
+    }
+    #intro-card > div > #intro-mobile {
+        font-size: 1rem;
+    }
+    #intro-card > div > .icons {
+        align-self: flex-end;
+    }
+
     #logo {
-        bottom: 0.5rem;
+        position: sticky;
+        top: 87%;
         right: 0.5rem;
         text-align: right;
     }
@@ -199,9 +252,9 @@ h2 {
     }
 
     #title {
+        position: sticky;
         width: 200px;
-        bottom: 0;
-        left: 0;
+        top: 82%;
         padding: 1rem 2rem;
     }
     #title > img {
@@ -257,11 +310,60 @@ h2 {
     h2 > br {
         display: none;
     }
+
+    #intro-card {
+        display: none;
+        font-family: monospace;
+        font-size: 1.3rem;
+        height: 96%;
+        padding: 1rem;
+        position: relative;
+        scroll-snap-align: start;
+        text-align: center;
+    }
+    #intro-card > div > #intro-close {
+        display: block;
+        position: fixed;
+        right: 3rem;
+        margin: 0;
+        cursor: pointer;
+    }
+    #intro-card > div > img {
+        max-height: 124px;
+    }
+    #intro-card > div {
+        display: grid;
+        grid-template-rows: 24% 7% 15% auto 1.5rem 2.8rem 4rem;
+        background-color: rgba(150, 226, 214, 0.7);
+        padding: 2rem;
+    }
+    #intro-card > div > p {
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+        max-width: 350px;
+    }
+
+    #intro-card > div > .rew-logo {
+        justify-self: center;
+    }
+    #intro-card > div > #intro-mobile {
+        font-size: 1rem;
+    }
+    #intro-card > div > .icons {
+        align-self: flex-end;
+    }
+
     .obj {
         position: absolute;
     }
+    
     .obj > a {
         position: fixed;
+        transition: 0.5s filter;
+    }
+    .obj > a:hover {
+        filter: drop-shadow(0px 0px 6px black);
     }
     .obj > .obj-bg {
         display: none;
@@ -274,7 +376,7 @@ h2 {
     }
 
     #sunlit {
-        top: 0; 
+        top: 1rem; 
         left: 35%;
     }
     #sunlit > a > img {
@@ -306,7 +408,7 @@ h2 {
     }
 
     #tumble {
-        bottom: 317px;
+        bottom: 325px;
         left: 45%;
     }
     #tumble > a > img {

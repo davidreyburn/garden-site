@@ -5,11 +5,6 @@
     <script src="https://kit.fontawesome.com/bd388cb508.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
-        /*
-        const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
-        window.addEventListener('resize', appHeight);
-        appHeight();
-        */
 
         $(document).ready(function(){
 
@@ -32,6 +27,18 @@
                     $(this).parent(".obj").siblings(".obj").fadeIn(400);
                 }
             });
+            $("#title > img").click(function(){
+                $('#intro-card').css("display", "grid")
+                $(".obj").fadeOut(200);
+                $("#title").fadeOut(200);
+                $("#logo").fadeOut(200);
+            });
+            $("#intro-close").click(function(){
+                $('#intro-card').fadeOut(400);
+                $(".obj").fadeIn(400);
+                $("#title").fadeIn(400);
+                $("#logo").fadeIn(400);
+            });
         });
     </script>
 </head>
@@ -43,8 +50,42 @@
 			<source src="assets/bg.webm" type="video/webm">
 		</video>
 
+        <div id="intro-card">
+            <div>
+                <h1 id="intro-close">X</h1>
+                <img src="img/goab-logo.svg">
+                <p>a visual album by</p>
+                <a href="https://rew.media" class="rew-logo">
+                    <img src="assets/rew-96.png">
+                </a>
+                <p>
+                    a flowery, but not too lengthy description of the work goes 
+                    here. Probably 2 or 3 sentences is best, I'd imagine. We'll 
+                    see if this is too long. No, actually it's looking a little 
+                    short. No, actually it's looking a little short.
+                </p>
+                <a href="">>Buy on bandcamp</a>
+                <p id="intro-mobile">or keep scrolling to explore the garden</p>
+
+                <div class="icons">
+                    <a>
+                        <i class="fab fa-bandcamp" href=""></i>  
+                    </a>
+                    <a href="https://wwww.instagram.com/nebulaflower/">
+                        <i class="fab fa-instagram"></i> 
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCDwxF2F4kFjGwiTTrF6Rwdw">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.vimeo.com/rewmedia">
+                        <i class="fab fa-vimeo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div id="title">
-            <img src="img/goab-logo.svg">
+            <img id="goab-logo" src="img/goab-logo.svg">
             <div class="icons">
                 <a>
                     <i class="fab fa-bandcamp" href=""></i>  
@@ -65,7 +106,7 @@
             <a href="https://rew.media">
                 <img src="assets/rew-64.png">
             </a>
-            <small>Copyright © 2020 Rachel Wagner <br> All Rigths Reserved</small>
+            <small>Copyright © 2020 Rachel Wagner <br> All Rights Reserved</small>
         </div>
 
         <div class="obj" id="sunlit">
@@ -76,7 +117,7 @@
 
         <div class="obj" id="frozen">
             <div class="obj-bg"></div>
-            <h2>Frozen <br>Veil</h2>
+            <h2>Frozen <br><span>V</span>eil</h2>
             <a href="https://youtu.be/rw5_y34fy6g"><img src="img/frozen.png"></a>
         </div>
         

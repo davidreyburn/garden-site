@@ -1,16 +1,5 @@
-- get list of video links
-- get a list of page links for bandcamp, vimeo, etc
-- get a cropped shape for each link
-    - must be rendered to png with transparent background
-    - it would be best if each is a distinct color
-    - need a section accent color for each
-    - also need source image for each
-- get Rew logo image
-    - may need multiple size renders
-- get album logo render or font file
-- get original unblurred background
-- get 10-15 sec subtle video loop background
-
-
-
-        
+- get a list of page links for bandcamp
+- get 15-20 sec subtle video loop background with more motion than current state
+- 4 sentence description of work for intro blurb
+- 4 words - 1 sentence description for each song
+- GOAB logo - same as current but "Garden of" is centered
