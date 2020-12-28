@@ -277,6 +277,13 @@ h3 {
         align-self: flex-end;
     }
 
+    #intro-mobile {
+        display: block;
+    }
+    #intro-desktop {
+        display: none;
+    }
+
     #logo {
         display: none;
         position: sticky;
@@ -326,12 +333,7 @@ h3 {
     #outgrate > .obj-bg {
         background-color: rgba(16,35,43,0.7);
     }
-    .intro-mobile {
-        display: block;
-    }
-    .intro-desktop {
-        display: none;
-    }
+    
 }
 
 @media only screen and (min-width: 801px) {
@@ -409,6 +411,13 @@ h3 {
     }
     #intro-card > div > .icons {
         align-self: flex-end;
+    }
+
+    #intro-mobile {
+        display: none;
+    }
+    #intro-desktop {
+        display: block;
     }
 
     .obj {
@@ -546,12 +555,5 @@ h3 {
 
     #title > img:hover {
         filter: drop-shadow(0 0 6 white);
-    }
-
-    .intro-mobile {
-        display: block;
-    }
-    .intro-desktop {
-        display: none;
     }
 }
