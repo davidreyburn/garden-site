@@ -35,13 +35,12 @@
                 $("#title").fadeOut(200);
                 $("#logo").fadeOut(200);
             });
-            $("#intro-close").click(function(){
+            $(".intro-close").click(function(){
                 $('#intro-card').fadeOut(400);
                 $(".obj").fadeIn(400);
                 $("#title").fadeIn(400);
                 $("#logo").fadeIn(400);
             });
-            /*
             $(".obj > a").click(function(){
                 $(this).parent(".obj").siblings(".obj").finish('fx').fadeOut(400);
                 $(this).finish('fx').fadeOut(400);
@@ -55,7 +54,6 @@
                 $(this).parent(".video-player").siblings("a").fadeIn(400);
                 
             });
-            */
         });
     </script>
 </head>
@@ -69,23 +67,23 @@
 
         <div id="intro-card">
             <div>
-                <h1 id="intro-close">X</h1>
+                <h1 id="intro-close" class="intro-close">X</h1>
                 <img src="assets/goab-logo-centered.svg">
                 <p>a visual album by</p>
                 <a href="https://rew.media" class="rew-logo">
                     <img src="assets/rew-96.png">
                 </a>
                 <p>
-                    Garden of Astral Blooms’ is a set of alien ecosystems envisioned as audiovisual 
-                    environments. They document scenes of ruin and wonder, each one a distorted and 
-                    strange celebration of nature’s beauty. The visions are practices in optimism, 
-                    reverent poems to a planet that supports life in a delicate and uncertain 
-                    balance.
+                    ‘Garden of Astral Blooms’ is a set of alien ecosystems envisioned as 
+                    audiovisual environments. They document scenes of ruin and wonder, 
+                    each one a distorted and strange celebration of nature’s beauty. The 
+                    visions are practices in optimism, reverent poems to a planet that 
+                    supports life in a delicate and uncertain balance.
                 </p>
                 <a href="">>Buy on bandcamp</a>
 
                 <p class="intro-mobile">or keep scrolling to explore the garden</p>
-                <p class="intro-desktop">or explore the garden</p>
+                <p class="intro-desktop">or <a href="#" onclick="return false;" class="intro-close">explore the garden</a></p>
 
                 <div class="icons">
                     <a>
@@ -140,7 +138,6 @@
             </h3>
             <a><img src="img/sunlit.png"></a>
             
-            <!--
               <div class="video-player">
                 <h1 class="video-close">[Close]</h1>
                 <h2>Sunlit <br>Glass</h2>
@@ -151,7 +148,6 @@
                 allowfullscreen>
                 </iframe>
             </div>  
-            -->
         </div>
 
         <div class="obj" id="frozen">

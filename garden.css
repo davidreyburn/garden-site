@@ -326,10 +326,10 @@ h3 {
     #outgrate > .obj-bg {
         background-color: rgba(16,35,43,0.7);
     }
-    .intro-mobile {
+    #intro-mobile {
         display: block;
     }
-    .intro-desktop {
+    #intro-desktop {
         display: none;
     }
 }
@@ -410,6 +410,14 @@ h3 {
     #intro-card > div > .icons {
         align-self: flex-end;
     }
+
+    #intro-mobile {
+        display: none;
+    }
+    #intro-desktop {
+        display: block;
+    }
+    
 
     .obj {
         position: absolute;
@@ -546,12 +554,5 @@ h3 {
 
     #title > img:hover {
         filter: drop-shadow(0 0 6 white);
-    }
-
-    .intro-mobile {
-        display: block;
-    }
-    .intro-desktop {
-        display: none;
     }
 }
