@@ -15,6 +15,7 @@
                     $(".bg").addClass("hover");
                     $(this).siblings('.obj-bg').finish('fx').fadeIn(400);
                     $(this).siblings('h2').finish('fx').fadeIn(400);
+                    $(this).siblings('h3').finish('fx').fadeIn(400);
                     $(this).parent(".obj").siblings(".obj").finish('fx').fadeOut(400);
                 }
                 }, function(){
@@ -24,10 +25,11 @@
                     $(".bg").removeClass("hover");
                     $(this).siblings('.obj-bg').finish('fx').fadeOut(400);
                     $(this).siblings('h2').fadeOut(400);
+                    $(this).siblings('h3').fadeOut(400);
                     $(this).parent(".obj").siblings(".obj").fadeIn(400);
                 }
             });
-            $("#title > img").click(function(){
+            $("#about").click(function(){
                 $('#intro-card').css("display", "grid")
                 $(".obj").fadeOut(200);
                 $("#title").fadeOut(200);
@@ -39,6 +41,21 @@
                 $("#title").fadeIn(400);
                 $("#logo").fadeIn(400);
             });
+            /*
+            $(".obj > a").click(function(){
+                $(this).parent(".obj").siblings(".obj").finish('fx').fadeOut(400);
+                $(this).finish('fx').fadeOut(400);
+                $(this).parent(".obj").siblings(".obj").css("z-index", "-1");
+                $(this).siblings(".video-player").fadeIn(400);
+            });
+            $(".video-close").click(function(){
+                $(".obj").css("z-index", "2");
+                $(this).parent(".video-player").fadeOut(400);
+                $(".obj").fadeIn(400);
+                $(this).parent(".video-player").siblings("a").fadeIn(400);
+                
+            });
+            */
         });
     </script>
 </head>
@@ -59,13 +76,14 @@
                     <img src="assets/rew-96.png">
                 </a>
                 <p>
-                    a flowery, but not too lengthy description of the work goes 
-                    here. Probably 2 or 3 sentences is best, I'd imagine. We'll 
-                    see if this is too long. No, actually it's looking a little 
-                    short. No, actually it's looking a little short.
+                    Garden of Astral Blooms’ is a set of alien ecosystems envisioned as audiovisual 
+                    environments. They document scenes of ruin and wonder, each one a distorted and 
+                    strange celebration of nature’s beauty. The visions are practices in optimism, 
+                    reverent poems to a planet that supports life in a delicate and uncertain 
+                    balance.
                 </p>
                 <a href="">>Buy on bandcamp</a>
-                
+
                 <p class="intro-mobile">or keep scrolling to explore the garden</p>
                 <p class="intro-desktop">or explore the garden</p>
 
@@ -88,6 +106,9 @@
 
         <div id="title">
             <img id="goab-logo" src="img/goab-logo.svg">
+            <p>
+                <a href="">Buy album</a> // <a href="#" onclick="return false;" id="about">About</a>
+            </p>
             <div class="icons">
                 <a>
                     <i class="fab fa-bandcamp" href=""></i>  
@@ -114,48 +135,86 @@
         <div class="obj" id="sunlit">
             <div class="obj-bg"></div>
             <h2>Sunlit <br>Glass</h2>
-            <a href="https://youtu.be/OvQ2Z6GYDJA"><img src="img/sunlit.png"></a>
+            <h3>
+                sharp shapes cut through a giant sphere // colored glass in a meadow
+            </h3>
+            <a><img src="img/sunlit.png"></a>
+            
+            <!--
+              <div class="video-player">
+                <h1 class="video-close">[Close]</h1>
+                <h2>Sunlit <br>Glass</h2>
+                <iframe 
+                src="https://www.youtube.com/embed/OvQ2Z6GYDJA?controls=0" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+                </iframe>
+            </div>  
+            -->
         </div>
 
         <div class="obj" id="frozen">
-            <div class="obj-bg"></div>
+            
             <h2>Frozen <br><span>V</span>eil</h2>
+            <h3>
+                industrial debris clutter // an icy crater hanging in the sky
+            </h3>
             <a href="https://youtu.be/rw5_y34fy6g"><img src="img/frozen.png"></a>
+            <div class="obj-bg"></div>
         </div>
         
         <div class="obj" id="crag">
             <div class="obj-bg"></div>
             <h2>Crag</h2>
+            <h3>
+                around the mountain with glowing cracks // rocks burst, avalanche 
+            </h3>
             <a href="https://youtu.be/i10a40xDJUc"><img src="img/crag.png"></a>
         </div>
 
         <div class="obj" id="scorched">
             <div class="obj-bg"></div>
             <h2>Scorched <br>Earth</h2>
+            <h3>
+                steel structures flicker behind luminous monoliths //  charred ruins
+            </h3>
             <a href="https://youtu.be/3CHrooMD6Rk"><img src="img/scorched.png"></a>
         </div>
 
         <div class="obj" id="tumble">
             <div class="obj-bg"></div>
             <h2>Tumbling <br>Forward</h2>
+            <h3>
+                iridescent clouds, swirling chaos blankets // jade trees fracture
+            </h3>
             <a href="https://youtu.be/wp0IdXBVQsQ"><img src="img/tumble.png"></a>
         </div>
 
         <div class="obj" id="fragile">
             <div class="obj-bg"></div>
             <h2>Fragile <br>Abundance</h2>
+            <h3>
+                diffuse vocals sing to organisms // moments before disintegrating
+            </h3>
             <a href="https://youtu.be/0VFlmKsORXg"><img src="img/fragile.png"></a>
         </div>
 
         <div class="obj" id="pipe">
             <div class="obj-bg"></div>
             <h2>Pipelines</h2>
+            <h3>
+                pillars tremble in a dark room // pipes lit from within
+            </h3>
             <a href="https://youtu.be/XME-E_P6IYE"><img src="img/pipe.png"></a>
         </div>
 
         <div class="obj" id="outgrate">
             <div class="obj-bg"></div>
             <h2>Outgrate</h2>
+            <h3>
+                out the tunnel, through the grate, away from the goo // higher above the ocean
+            </h3>
             <a href="https://youtu.be/HEYQN7NdZ3w"><img src="img/outgrate.png"></a>
         </div>
 

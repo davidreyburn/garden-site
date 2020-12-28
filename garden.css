@@ -37,16 +37,39 @@ body {
 }
 
 #intro-card {
+    display: none;
+    font-family: monospace;
+    font-size: 1.3rem;
+    height: 96%;
+    padding: 1rem;
+    position: relative;
+    scroll-snap-align: start;
+    text-align: center;
     z-index: 6;
+}
+#intro-card > div {
+    display: grid;
+    grid-template-rows: 24% 7% 15% auto 1.5rem 2.8rem 4rem;
+    background-color: rgba(150, 226, 214, 0.7);
+    padding: 2rem;
 }
 #intro-card > div > .icons {
     max-width: 375px;
     justify-self: center;
 }
+#intro-card > div > p {
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+}
+
 
 h2 {
     font-family: 'kabondregular';
     letter-spacing: 4px;
+    z-index: 2;
+}
+h3 {
     z-index: 2;
 }
 
@@ -63,49 +86,49 @@ h2 {
     z-index: 1;
 }
 
-#sunlit > h2 {
+#sunlit > h2, #sunlit > h3 {
     background-color:rgba(62,29,46,0.9);
 }
 #sunlit > .obj-bg {
     background-color: rgba(189, 86, 139, 0.7);
 }
-#frozen > h2 {
+#frozen > h2, #frozen > h3 {
     background-color:rgba(12,26,67,0.9);
 }
 #frozen > .obj-bg {
     background-color: rgba(61, 110, 255, 0.7);
 }
-#crag > h2 {
+#crag > h2, #crag > h3  {
     background-color:rgba(49,87,10,0.9);
 }
 #crag > .obj-bg {
     background-color: rgba(143, 255, 30, 0.7);
 }
-#scorched > h2 {
+#scorched > h2, #scorched > h3 {
     background-color:rgba(76,66,59,0.9);
 }
 #scorched > .obj-bg {
     background-color: rgba(255, 220, 196, 0.7);
 }
-#tumble > h2 {
+#tumble > h2, #tumble > h3 {
     background-color:rgba(0,53,49,0.9);
 }
 #tumble > .obj-bg {
     background-color: rgba(0, 255, 234, 0.7);
 }
-#fragile > h2 {
+#fragile > h2, #fragile > h3 {
     background-color:rgba(15,82,81,0.9);
 }
 #fragile > .obj-bg {
     background-color: rgba(43, 182, 179, 0.7);
 }
-#pipe > h2 {
+#pipe > h2, #pipe > h3 {
     background-color:rgba(21,56,86,0.9);
 }
 #pipe > .obj-bg {
     background-color: rgba(60, 164, 255, 0.7);
 }
-#outgrate > h2 {
+#outgrate > h2, #outgrate > h3 {
     background-color:rgba(16,35,43,0.9);
 }
 #outgrate > .obj-bg {
@@ -127,6 +150,8 @@ h2 {
 
 
 #title {
+    font-family: monospace;
+    font-size: 1.2rem;
     background-color: rgba(150, 226, 214, 0.6);
     color: black;
     position: fixed;
@@ -136,6 +161,9 @@ h2 {
 #title > img {
     height: 64px;
     padding-bottom: 0.5rem;
+}
+#title > p {
+    margin-top: 0;
 }
 
 #title > a:hover {
@@ -152,7 +180,7 @@ h2 {
     h2 {
         color: rgba(245,245,245,0.8);
         font-size: 3rem;
-        height: fit-content;
+        height: 96px;
         padding: 1rem 2rem;
         margin-top: 0;
         opacity: 1;
@@ -160,6 +188,14 @@ h2 {
     }
     h2 > span {
         letter-spacing: -14px;
+    }
+    h3 {
+        background-color: rgba(0,0,0,0) !important;
+        color: rgba(240,240,240,0.7);
+        padding: 0 6rem;
+        position: absolute;
+        text-align: center;
+        top: 8rem;
     }
     body {
         display: flex;
@@ -186,13 +222,14 @@ h2 {
     }
     
     .obj > a {
-        position: absolute;
         align-self: center;
-        justify-self: center;
-        max-width: 60%;
-        max-height: 70%;
-        z-index: 2;
         filter: drop-shadow(0px 0px 6px black);
+        justify-self: center;
+        max-height: 60%;
+        max-width: 60%;
+        padding-top: 2rem;
+        position: absolute;
+        z-index: 2;
     }
 
     .obj > a > img {
@@ -227,7 +264,7 @@ h2 {
         align-self: center;
         justify-self: center;
         margin: 0;
-        max-width: 350px;
+        max-width: 550px;
     }
 
     #intro-card > div > .rew-logo {
@@ -241,6 +278,7 @@ h2 {
     }
 
     #logo {
+        display: none;
         position: sticky;
         top: 87%;
         right: 0;
@@ -260,6 +298,10 @@ h2 {
     #title > img {
         color: rgba(245,245,245,0.8);
     }
+    #title > p {
+        display: none;
+    }
+
     #sunlit > .obj-bg {
         background-color: rgba(62,29,46,0.7);
     }
@@ -293,6 +335,24 @@ h2 {
 }
 
 @media only screen and (min-width: 801px) {
+    iframe {
+        width: 100%;
+        height: 64vh;
+    }
+    .video-player {
+        display: none;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        padding: 1rem 2rem;
+        width: 100vw;
+        position: fixed;
+        height: 100vh;
+    }
+    .video-player > h1 {
+        text-align: right;
+        color: white;
+    }
     .container {
         position: fixed;
         width: 100vw;
@@ -302,7 +362,7 @@ h2 {
     h2 {
         color: white;
         display: none;
-        font-size: 2.5rem;
+        font-size: 3rem;
         left: 0;
         margin-left: 2rem;
         margin-top: 1rem;
@@ -316,16 +376,15 @@ h2 {
     h2 > br {
         display: none;
     }
-
-    #intro-card {
-        display: none;
+    h3 {
         font-family: monospace;
-        font-size: 1.3rem;
-        height: 96%;
+        font-weight: 100;
+        position: fixed;
         padding: 1rem;
-        position: relative;
-        scroll-snap-align: start;
-        text-align: center;
+        font-size: 1.8rem;
+        color: white;
+        display: none;
+        max-width: 25rem;
     }
     #intro-card > div > #intro-close {
         display: block;
@@ -338,17 +397,8 @@ h2 {
         max-height: 124px;
         align-self: flex-end;
     }
-    #intro-card > div {
-        display: grid;
-        grid-template-rows: 24% 7% 15% auto 1.5rem 2.8rem 4rem;
-        background-color: rgba(150, 226, 214, 0.7);
-        padding: 2rem;
-    }
     #intro-card > div > p {
-        align-self: center;
-        justify-self: center;
-        margin: 0;
-        max-width: 350px;
+        max-width: 750px;
     }
 
     #intro-card > div > .rew-logo {
@@ -389,6 +439,10 @@ h2 {
     #sunlit > a > img {
         width: 256px;
     }
+    #sunlit > h3 {
+        top: 45%; 
+        left: 30%;
+    }
 
     #frozen {
         top: 20%; 
@@ -396,6 +450,10 @@ h2 {
     }
     #frozen > a > img {
         width: 128px;
+    }
+    #frozen > h3 {
+        top: 50%; 
+        left: 20%;
     }
 
     #crag {
@@ -405,6 +463,10 @@ h2 {
     #crag > a > img {
         width: 200px;
     }
+    #crag > h3 {
+        top: 35%; 
+        left: 30%;
+    }
 
     #scorched {
         top: 55%; 
@@ -412,6 +474,10 @@ h2 {
     }
     #scorched > a > img {
         width: 96px;
+    }
+    #scorched > h3 {
+        top: 35%; 
+        left: 20%;
     }
 
     #tumble {
@@ -421,6 +487,10 @@ h2 {
     #tumble > a > img {
         width: 256px;
     }
+    #tumble > h3 {
+        top: 25%; 
+        left: 50%;
+    }
 
     #fragile {
         top: 70%; 
@@ -428,6 +498,10 @@ h2 {
     }
     #fragile > a > img {
         width: 256px;
+    }
+    #fragile > h3 {
+        top: 35%; 
+        left: 45%;
     }
 
     #pipe {
@@ -437,6 +511,10 @@ h2 {
     #pipe > a > img {
         width: 256px;
     }
+    #pipe > h3 {
+        top: 35%; 
+        left: 45%;
+    }
 
     #outgrate {
         top: 20%; 
@@ -444,6 +522,10 @@ h2 {
     }
     #outgrate > a > img {
         width: 128px;
+    }
+    #outgrate > h3 {
+        top: 45%; 
+        left: 30%;
     }
 
     .hover {
@@ -460,6 +542,10 @@ h2 {
         bottom: 0;
         right: 0;
         padding: 1rem 2rem;
+    }
+
+    #title > img:hover {
+        filter: drop-shadow(0 0 6 white);
     }
 
     .intro-mobile {
