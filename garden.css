@@ -277,10 +277,10 @@ h3 {
         align-self: flex-end;
     }
 
-    #intro-mobile {
+    .intro-mobile {
         display: block;
     }
-    #intro-desktop {
+    .intro-desktop {
         display: none;
     }
 
@@ -413,10 +413,10 @@ h3 {
         align-self: flex-end;
     }
 
-    #intro-mobile {
+    .intro-mobile {
         display: none;
     }
-    #intro-desktop {
+    .intro-desktop {
         display: block;
     }
 
