@@ -258,7 +258,7 @@ h3 {
     }
     #intro-card > div {
         display: grid;
-        grid-template-rows: 20% 7% 15% auto 1.5rem 2.8rem 4rem;
+        grid-template-rows: 125px 7% 15% auto 1.5rem 2.8rem 4rem;
         background-color: rgba(150, 226, 214, 0.7);
         padding: 2rem;
     }
