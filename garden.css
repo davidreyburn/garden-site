@@ -301,7 +301,7 @@ h3 {
     #title {
         position: sticky;
         width: 200px;
-        top: 82%;
+        top: 81%;
         padding: 1rem 2rem;
     }
     #title > img {
@@ -480,8 +480,8 @@ h3 {
     }
 
     #scorched {
-        top: 55%; 
-        left: 65%;
+        top: 53%; 
+        left: 67%;
     }
     #scorched > a > img {
         width: 96px;
