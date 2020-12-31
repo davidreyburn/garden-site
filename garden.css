@@ -254,7 +254,7 @@ h3 {
         display: none;
     }
     #intro-card > div > img {
-        max-height: 124px;
+        max-height: 96px;
     }
     #intro-card > div {
         display: grid;
