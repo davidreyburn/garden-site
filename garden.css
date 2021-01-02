@@ -181,6 +181,7 @@ h3 {
     h2 {
         color: rgba(245,245,245,0.8);
         font-size: 3rem;
+        height: fit-content;
         padding: 1rem 2rem;
         margin-top: 0;
         opacity: 1;
@@ -193,9 +194,9 @@ h3 {
         background-color: rgba(0,0,0,0) !important;
         color: rgba(240,240,240,0.7);
         padding: 0 4rem;
-        position: absolute;
+        position: relative;
         text-align: center;
-        top: 8rem;
+        top: 6rem;
     }
     body {
         display: flex;
@@ -226,9 +227,9 @@ h3 {
         align-self: center;
         filter: drop-shadow(0px 0px 6px black);
         justify-self: center;
-        max-height: 60%;
-        max-width: 60%;
-        padding-top: 2rem;
+        max-height: 50%;
+        max-width: 50%;
+        padding-bottom: 4rem;
         position: absolute;
         z-index: 2;
     }
