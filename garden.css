@@ -196,7 +196,7 @@ h3 {
         padding: 0 4rem;
         position: relative;
         text-align: center;
-        top: 6rem;
+        top: 4rem;
     }
     body {
         display: flex;
@@ -229,7 +229,7 @@ h3 {
         justify-self: center;
         max-height: 50%;
         max-width: 50%;
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
         position: absolute;
         z-index: 2;
     }
